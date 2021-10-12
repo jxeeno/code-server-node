@@ -13,4 +13,4 @@ USER 1000
 ENV USER=coder
 WORKDIR /home/coder
 ENV PROXY_DOMAIN=example.com
-ENTRYPOINT ["/usr/bin/entrypoint.sh", "--bind-addr", "0.0.0.0:8080", "--proxy-domain", "$PROXY_DOMAIN", "."]
+ENTRYPOINT /usr/bin/entrypoint.sh --bind-addr 0.0.0.0:8080 --proxy-domain $PROXY_DOMAIN .
